@@ -4,6 +4,7 @@
 
 #include <libcamera/libcamera.h>
 
+using namespace std;
 using namespace libcamera;
 
 int main(void)
