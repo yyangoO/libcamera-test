@@ -25,7 +25,7 @@ int main(void)
         return EXIT_FAILURE;
     }
 
-    cout << "[camera device list begin]" << endl;
+    cout << "\033[35m[camera device list begin]" << endl;
     for (auto const &camera : cm->cameras())
     {
         cout << camera->id() << endl;
@@ -36,7 +36,9 @@ int main(void)
     camera = cm->get(camera_id);
     camera->acquire();
 
-    cm->stop();
+	camera->release();
+	camera.reset();
+	cm->stop();
 
     return 0;
 }
