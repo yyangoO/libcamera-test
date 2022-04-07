@@ -11,4 +11,4 @@ include_directories(/usr/local/include/libcamera/)
 
 add_executable(libcamera_tests src/main.cpp)
 
-target_link_libraries(libcamera_tests libcamera.so)
+target_link_libraries(libcamera_tests libcamera.so libcamera-base.so)
