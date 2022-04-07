@@ -9,6 +9,6 @@ set(CMAKE_BUILD_TYPE "Debug")
 
 include_directories(/usr/local/include/libcamera/)
 
-add_executable(libcamera_tests src/main.cpp)
+add_executable(libcamera_tests src/main.cpp src/eventloop.cpp)
 
 target_link_libraries(libcamera_tests libcamera.so libcamera-base.so)
